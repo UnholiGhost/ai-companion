@@ -35,7 +35,26 @@ Make sure your local LM Studio server is running and accessible at:
 http://localhost:1234/v1
 ```
 
-## 4. Running the Script
+In the script you have to specify the model you're using:
+```python
+completion = client.chat.completions.create(
+    model="Orenguteng/Llama-3.1-8B-Lexi-Uncensored-V2-GGUF",
+    messages=history,
+    temperature=0.7
+)
+```
+
+## 4. Install ffmpeg and espeak-ng
+Go to https://ffmpeg.org/download.html to install ffmpeg bianries. Add the bin folder to you PATH.
+
+To install espeak-ng on Windows:
+
+1. Go to espeak-ng releases: https://github.com/espeak-ng/espeak-ng/releases
+2. Click on Latest release
+3. Download the appropriate *.msi file (e.g. espeak-ng-20191129-b702b03-x64.msi)
+4. Run the downloaded installer
+
+## 5. Running the Script
 
 ```bash
 python app.py

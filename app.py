@@ -43,10 +43,10 @@ whisper_initial_prompts = [None]
 
 #LLM init
 client = OpenAI (base_url="http://localhost:1234/v1", api_key="lm-studio")
-device = "cpu"
+device='cuda' if torch.cuda.is_available() else 'cpu'
 
 #TTS init
-pipeline = KPipeline(lang_code='a', device='cuda' if torch.cuda.is_available() else 'cpu')
+pipeline = KPipeline(lang_code='a', device=device)
 
 #sound play init
 pygame.mixer.init()
