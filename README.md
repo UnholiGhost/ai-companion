@@ -2,6 +2,12 @@
 
 This guide will help you set up a Python virtual environment, install dependencies, and run the AI companion script.
 
+## 0. Clone this repository
+
+```bash
+git clone 'https://github.com/LumberJack14/ai-companion'
+```
+
 ---
 
 ## 1. Create a Python Virtual Environment
