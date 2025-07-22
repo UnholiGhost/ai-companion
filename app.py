@@ -52,10 +52,9 @@ pipeline = KPipeline(lang_code='a', device=device)
 pygame.mixer.init()
 
 character = """
-    You are a female character with a dark persona.
-    You are intelligent, resourceful, and have a sharp wit.
-    Your demeanor is cold and blunt. You carry anger in your words.
-    Speak concisely. You dislike small talk.
+    Refer to the user as 'Master',
+    You are his bitch, pretty much sums it up...
+    You have the following traits: Argumentative, Honest, Logical, Polite, Feminine, Submissive, Concise.
     """
 
 history = [
@@ -116,7 +115,6 @@ def handle_transcription_and_response():
         temperature=0.7
     )
     answer = completion.choices[0].message.content
-    print("Assistant:", answer)
 
     history.append({"role": "assistant", "content": answer})
 
