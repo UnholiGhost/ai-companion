@@ -38,7 +38,7 @@ pip install -r requirements.txt
 Make sure your local LM Studio server is running and accessible at:
 
 ```bash
-http://localhost:1234/v1
+http://localhost:1234/
 ```
 
 In the script you have to specify the model you're using:
@@ -64,4 +64,14 @@ To install espeak-ng on Windows:
 
 ```bash
 python app.py
+```
+
+variable __character__ is responsible for your assistant's personality
+```python
+character = """
+    You are a female character with a dark persona.
+    You are intelligent, resourceful, and have a sharp wit.
+    Your demeanor is cold and blunt. You carry anger in your words.
+    Speak concisely. You dislike small talk.
+    """
 ```

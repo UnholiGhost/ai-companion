@@ -51,13 +51,15 @@ pipeline = KPipeline(lang_code='a', device=device)
 #sound play init
 pygame.mixer.init()
 
-history = [
-    {"role": "system", "content": """
+character = """
     You are a female character with a dark persona.
     You are intelligent, resourceful, and have a sharp wit.
     Your demeanor is cold and blunt. You carry anger in your words.
     Speak concisely. You dislike small talk.
-    """}
+    """
+
+history = [
+    {"role": "system", "content": character}
 ]
 
 def audio_callback(indata, frames, time_info, status):
