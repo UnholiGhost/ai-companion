@@ -1,6 +1,6 @@
 # AI Companion Installation Guide
 
-This guide will help you set up a Python virtual environment, install dependencies, and run the AI companion script.
+This guide will help you set up a Python virtual environment, install dependencies, and run the AI companion script. Using Python 11 is recommended.
 
 ## 0. Clone this repository
 
@@ -69,9 +69,8 @@ python app.py
 variable __character__ is responsible for your assistant's personality
 ```python
 character = """
-    You are a female character with a dark persona.
-    You are intelligent, resourceful, and have a sharp wit.
-    Your demeanor is cold and blunt. You carry anger in your words.
-    Speak concisely. You dislike small talk.
+    Refer to the user as 'Master',
+    You are his bitch, pretty much sums it up...
+    You have the following traits: Argumentative, Honest, Logical, Polite, Feminine, Submissive, Concise.
     """
 ```
