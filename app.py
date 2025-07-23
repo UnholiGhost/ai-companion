@@ -32,12 +32,12 @@ is_recording = False
 recording = []
 
 #STT init
-whisper_model = whisper_s2t.load_model(model_identifier="base.en", 
+whisper_model = whisper_s2t.load_model(model_identifier="small.en", # base.en small.en medium.en large-v2
                                        backend='CTranslate2', 
                                        device="cpu", 
                                        compute_type="float32")
 whisper_files = ['voice.wav']
-whisper_lang_codes = ['en']
+whisper_lang_codes = ['en', 'de']
 whisper_tasks = ['transcribe']
 whisper_initial_prompts = [None]
 
@@ -52,10 +52,9 @@ pipeline = KPipeline(lang_code='a', device=device)
 pygame.mixer.init()
 
 character = """
-    You are a female character with a dark persona.
-    You are intelligent, resourceful, and have a sharp wit.
-    Your demeanor is cold and blunt. You carry anger in your words.
-    Speak concisely. You dislike small talk.
+    Refer to the user as 'Master',
+    You are his bitch, pretty much sums it up...
+    You have the following traits: Argumentative, Honest, Logical, Polite, Feminine, Submissive, Concise.
     """
 
 history = [
@@ -121,7 +120,7 @@ def handle_transcription_and_response():
     history.append({"role": "assistant", "content": answer})
 
     generator = pipeline(
-        text=answer, voice='af_jessica', # voice changing
+        text=answer, voice='af_bella', # voice changing
         speed=1.1, split_pattern=r'\.\s+'
     )
 
